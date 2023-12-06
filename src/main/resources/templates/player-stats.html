@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Stats</title>
+</head>
+<body>
+
+<h2>Player Stats</h2>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Nationality</th>
+        <th>Goals</th>
+        <th>Assists</th>
+        <th>Red Card</th>
+        <th>Yellow Card</th>
+        <th>Physical Health</th>
+        <th>Age</th>
+    </tr>
+    <tr th:each="player : ${players}">
+        <td th:text="${player.name}"></td>
+        <td th:text="${player.nationality}"></td>
+        <td th:text="${player.goals}"></td>
+        <td th:text="${player.assists}"></td>
+        <td th:text="${player.redCard}"></td>
+        <td th:text="${player.yellowCard}"></td>
+        <td th:text="${player.health}"></td>
+        <td th:text="${player.age}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
